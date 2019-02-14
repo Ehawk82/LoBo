@@ -4,7 +4,8 @@ var myUI = {
 	},
 	loadout: () => {
 		var dvContain = createEle("div"),
-		    btnFrame = createEle("div"),
+		    btnFrameL = createEle("div"),
+		    btnFrameR = createEle("div"),
 		    fsBtn = createEle("div"),
 		    rewardsBtn = createEle("div"),
 		    dnaBtn = createEle("div"),
@@ -43,19 +44,22 @@ var myUI = {
 		settingsBtn.innerHTML = "⚙";
 		settingsBtn.className = "buttons";
 
-		btnFrame.className = "btnFrame";
-		btnFrame.append(homeBtn);
-		btnFrame.append(settingsBtn);
-		btnFrame.append(mapBtn);
-		btnFrame.append(storeBtn);
-		btnFrame.append(natureBtn);
-		btnFrame.append(invBtn);
-		btnFrame.append(dnaBtn);
-		btnFrame.append(rewardsBtn);
-		btnFrame.append(fsBtn);
+		btnFrameL.className = "btnFrameL";
+		btnFrameL.append(homeBtn);
+		btnFrameL.append(settingsBtn);
+		btnFrameL.append(mapBtn);
+		btnFrameL.append(storeBtn);
+		btnFrameL.append(natureBtn);
+		btnFrameL.append(invBtn);
+		btnFrameL.append(dnaBtn);
+		btnFrameL.append(rewardsBtn);
+
+        btnFrameR.className = "btnFrameR";
+        btnFrameR.append(fsBtn);
 
         dvContain.className = "dvContain";
-        dvContain.append(btnFrame);
+        dvContain.append(btnFrameL);
+        dvContain.append(btnFrameR);
 
 		loboGame.append(dvContain);
 	},
