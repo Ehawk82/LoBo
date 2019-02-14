@@ -4,8 +4,7 @@
   "description": "Lobo, the Game",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/js/index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -16,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/Ehawk82/LoBo/issues"
   },
-  "homepage": "https://github.com/Ehawk82/LoBo#readme"
+  "homepage": "https://github.com/Ehawk82/LoBo#readme",
+  "devDependencies": {
+    "gScript2019": "git+https://github.com/Ehawk82/gScript2019.git"
+  },
+  "dependencies": {
+    "node-emoji": "^1.8.1"
+  }
 }
