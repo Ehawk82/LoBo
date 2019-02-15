@@ -18,43 +18,51 @@ var myUI = {
         
         fsBtn.innerHTML = "🔳";
 		fsBtn.className = "buttons";
-		fsBtn.onclick = myUI.toggleScreen();
+		fsBtn.onclick = myUI.toggleScreen(fsBtn);
 
         rewardsBtn.innerHTML = "🌟";
+		rewardsBtn.id = "rewards";
 		rewardsBtn.className = "buttons";
 
         dnaBtn.innerHTML = "💡";
+		dnaBtn.id = "dna";
 		dnaBtn.className = "buttons";
         
         invBtn.innerHTML = "📦";
+		invBtn.id = "inventory";
 		invBtn.className = "buttons";
 
         natureBtn.innerHTML = "🌲";
+		natureBtn.id = "nature";
 		natureBtn.className = "buttons";
 
         storeBtn.innerHTML = "💲";
+		storeBtn.id = "store";
 		storeBtn.className = "buttons";
 
         mapBtn.innerHTML = "📜";
+		mapBtn.id = "map";
 		mapBtn.className = "buttons";
 
         homeBtn.innerHTML = "🏠";
 		homeBtn.className = "buttons";
+		homeBtn.id = "home";
+		homeBtn.onclick = myUI.goHome();
 
 		settingsBtn.innerHTML = "⚙";
 		settingsBtn.className = "buttons";
 
 		btnFrameL.className = "btnFrameL";
 		btnFrameL.append(homeBtn);
-		btnFrameL.append(settingsBtn);
 		btnFrameL.append(mapBtn);
 		btnFrameL.append(storeBtn);
 		btnFrameL.append(natureBtn);
 		btnFrameL.append(invBtn);
 		btnFrameL.append(dnaBtn);
-		btnFrameL.append(rewardsBtn);
 
         btnFrameR.className = "btnFrameR";
+		btnFrameR.append(rewardsBtn);
+        btnFrameR.append(settingsBtn);
         btnFrameR.append(fsBtn);
 
         dvContain.className = "dvContain";
@@ -62,8 +70,20 @@ var myUI = {
         dvContain.append(btnFrameR);
 
 		loboGame.append(dvContain);
+
+		setTimeout(() => {
+            makeFull(homeBtn);
+            setTimeout(() => {
+            	myUI.spawnPage();
+            }, 40);
+		}, 10);
 	},
-	toggleScreen: () => {
+	spawnPage: () => {
+        var btns = bySelAll(".buttons_full");
+        
+        console.log(btns);
+	},
+	toggleScreen: (fsBtn) => {
 		return () => {
 			var isInFullScreen = (document.fullscreenElement && document.fullscreenElement !== null) ||
         (document.webkitFullscreenElement && document.webkitFullscreenElement !== null) ||
@@ -72,6 +92,7 @@ var myUI = {
 
     		var docElm = document.documentElement;
     		if (!isInFullScreen) {
+    			fsBtn.innerHTML = "➖";
         		if (docElm.requestFullscreen) {
             		docElm.requestFullscreen();
         		} else if (docElm.mozRequestFullScreen) {
@@ -82,6 +103,8 @@ var myUI = {
             		docElm.msRequestFullscreen();
         		}
     		} else {
+    			fsBtn.innerHTML = "🔳";
+
         		if (document.exitFullscreen) {
             		document.exitFullscreen();
         		} else if (document.webkitExitFullscreen) {
@@ -92,6 +115,11 @@ var myUI = {
             		document.msExitFullscreen();
         		}
     		}
+		}
+	},
+	goHome: () => {
+		return () => {
+			location.reload();
 		}
 	}
 };
