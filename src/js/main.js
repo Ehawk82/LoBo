@@ -91,30 +91,58 @@ myUI = {
 	},
 	spawnPage: () => {
         var btns = bySelAll(".buttons_full"), elem = btns[0].id,
-            section = createEle("section"),
-            h1 = createEle("h1"), sectionText;
+            section = createEle("section"), sDiv = createEle("div"),
+            h1 = createEle("h1"), sectionText, sectionImg;
 
         if (elem === "home") {
         	sectionText = "HOME";
+        	sectionDiv = "home stuffs";
+        	sectionImg = "room";
         }
         if (elem === "map") {
-        	sectionText = "MAP";
+        	sectionText = "WORLD MAP";
+        	sectionDiv = "world stuffs";
+        	sectionImg = "map";
+
+
         }
         if (elem === "store") {
-        	sectionText = "SHOP";
+        	sectionText = "MARKET";
+        	sectionDiv = "market stuffs";
+        	sectionImg = "market";
+
+
         }
         if (elem === "nature") {
         	sectionText = "NATURE";
+        	sectionDiv = "outside stuffs";
+        	sectionImg = "nature";
+
+
         }
         if (elem === "inventory") {
-        	sectionText = "BOX";
+        	sectionText = "INVENTORY";
+        	sectionDiv = "my stuffs";
+        	sectionImg = "inventory";
+
+
         }
         if (elem === "dna") {
         	sectionText = "RESEARCH";
+        	sectionDiv = "dna stuffs";
+        	sectionImg = "dna";
+
+
         }
 
         h1.innerHTML = sectionText;
+
+        sDiv.innerHTML = sectionDiv;
+        sDiv.className = "sDiv";
+        sDiv.style.backgroundImage = "url('../LoBo/src/assets/" + sectionImg + ".jpg')";
+
         section.append(h1);
+        section.append(sDiv);
         loboGame.append(section);
 	},
 	toggleScreen: (fsBtn) => {

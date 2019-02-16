@@ -17,8 +17,8 @@ button {
 section {
 	display: grid;
     height:fit-content;
-    width: 99%;
-    margin:.5%;
+
+    
 }
 h1 {
 
@@ -86,9 +86,19 @@ h1 {
 	display: inline;
     float: right;
 }
+.sDiv {
+   background-color: slategrey;
+   height:600px;
+   margin:1%;
+   
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: 100% 600px;
+}
 /*ID*/
 #loboGame {
     height: fit-content;
+
 }
 /*MULTI*/
 .buttons {
@@ -98,11 +108,23 @@ h1 {
 .buttons, .buttons_full, section, h1{
 	transition: 60ms all;
 }
-
+section, .sDiv{
+	margin:5px;
+}
 h1 {
 	text-indent: 10px;
 }
-section, .dvContain, #loboGame {
-	box-shadow: 0 0 1px inset silver, 0 0 2px inset silver,0 0 3px inset silver;
+section, .sDiv {
+	box-shadow: 0 0 1px inset black, 0 0 2px inset black,0 0 3px inset black;
+}
+#loboGame {
+	background-color:slategrey;
+}
+section {
+	background-color:rgba(0,0,0,0.5);
+
+}
+.sDiv {
+	text-align: center;
 }
 /*KEYFRAMES*/
