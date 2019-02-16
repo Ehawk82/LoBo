@@ -56,7 +56,7 @@ myUI = {
         homeBtn.innerHTML = "🏠";
 		homeBtn.className = "buttons";
 		homeBtn.id = "home";
-		homeBtn.onclick = myUI.goHome();
+		homeBtn.onclick = myUI.goMap(homeBtn);
 
 		settingsBtn.innerHTML = "⚙";
 		settingsBtn.id = "settings";
@@ -149,11 +149,6 @@ myUI = {
             		document.msExitFullscreen();
         		}
     		}
-		}
-	},
-	goHome: () => {
-		return () => {
-			location.reload();
 		}
 	},
 	goMap: (x) => {
