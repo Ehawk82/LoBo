@@ -1,4 +1,5 @@
-var myUI = {
+var myUI;
+myUI = {
 	init: () => {
 		myUI.loadout();
 	},
@@ -27,22 +28,30 @@ var myUI = {
         dnaBtn.innerHTML = "💡";
 		dnaBtn.id = "dna";
 		dnaBtn.className = "buttons";
+		dnaBtn.onclick = myUI.goMap(dnaBtn);
+		
         
         invBtn.innerHTML = "📦";
 		invBtn.id = "inventory";
 		invBtn.className = "buttons";
+		invBtn.onclick = myUI.goMap(invBtn);
+
 
         natureBtn.innerHTML = "🌲";
 		natureBtn.id = "nature";
 		natureBtn.className = "buttons";
+		natureBtn.onclick = myUI.goMap(natureBtn);
+
 
         storeBtn.innerHTML = "💲";
 		storeBtn.id = "store";
 		storeBtn.className = "buttons";
+		storeBtn.onclick = myUI.goMap(storeBtn);
 
         mapBtn.innerHTML = "📜";
 		mapBtn.id = "map";
 		mapBtn.className = "buttons";
+		mapBtn.onclick = myUI.goMap(mapBtn);
 
         homeBtn.innerHTML = "🏠";
 		homeBtn.className = "buttons";
@@ -50,6 +59,8 @@ var myUI = {
 		homeBtn.onclick = myUI.goHome();
 
 		settingsBtn.innerHTML = "⚙";
+		settingsBtn.id = "settings";
+
 		settingsBtn.className = "buttons";
 
 		btnFrameL.className = "btnFrameL";
@@ -79,9 +90,32 @@ var myUI = {
 		}, 10);
 	},
 	spawnPage: () => {
-        var btns = bySelAll(".buttons_full");
-        
-        console.log(btns);
+        var btns = bySelAll(".buttons_full"), elem = btns[0].id,
+            section = createEle("section"),
+            h1 = createEle("h1"), sectionText;
+
+        if (elem === "home") {
+        	sectionText = "HOME";
+        }
+        if (elem === "map") {
+        	sectionText = "MAP";
+        }
+        if (elem === "store") {
+        	sectionText = "SHOP";
+        }
+        if (elem === "nature") {
+        	sectionText = "NATURE";
+        }
+        if (elem === "inventory") {
+        	sectionText = "BOX";
+        }
+        if (elem === "dna") {
+        	sectionText = "RESEARCH";
+        }
+
+        h1.innerHTML = sectionText;
+        section.append(h1);
+        loboGame.append(section);
 	},
 	toggleScreen: (fsBtn) => {
 		return () => {
@@ -120,6 +154,19 @@ var myUI = {
 	goHome: () => {
 		return () => {
 			location.reload();
+		}
+	},
+	goMap: (x) => {
+		return () => {
+			var full_btns = bySelAll(".buttons_full"), section = byTag("section", 0);
+			if (full_btns[0].id != x.id) {
+				takeFull(full_btns[0]);
+                makeFull(x);
+                section.remove();
+                myUI.spawnPage();
+			} else {
+
+			}
 		}
 	}
 };
