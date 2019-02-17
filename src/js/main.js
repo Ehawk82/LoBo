@@ -96,43 +96,33 @@ myUI = {
 
         if (elem === "home") {
         	sectionText = "HOME";
-        	sectionDiv = "home stuffs";
+        	sectionDiv = "<div class='item_holder'><div class='items'>" + homeSect[0] + "</div><div class='items'>" + homeSect[1] + "</div><div class='items'>" + homeSect[2] + "</div>" + "</div>";
         	sectionImg = "room";
         }
         if (elem === "map") {
         	sectionText = "WORLD MAP";
-        	sectionDiv = "world stuffs";
+        	sectionDiv = "<div class='item_holder'><div class='items'>" + mapSect[0] + "</div><div class='items'>" + mapSect[1] + "</div><div class='items'>" + mapSect[2] + "</div>" + "</div>";
         	sectionImg = "map";
-
-
         }
         if (elem === "store") {
         	sectionText = "MARKET";
-        	sectionDiv = "market stuffs";
+        	sectionDiv = "<div class='item_holder'><div class='items'>" + marketSect[0] + "</div><div class='items'>" + marketSect[1] + "</div><div class='items'>" + marketSect[2] + "</div>" + "</div>";
         	sectionImg = "market";
-
-
         }
         if (elem === "nature") {
         	sectionText = "NATURE";
-        	sectionDiv = "outside stuffs";
+        	sectionDiv = "<div class='item_holder'><div class='items'>" + natureSect[0] + "</div><div class='items'>" + natureSect[1] + "</div><div class='items'>" + natureSect[2] + "</div>" + "</div>";
         	sectionImg = "nature";
-
-
         }
         if (elem === "inventory") {
         	sectionText = "INVENTORY";
-        	sectionDiv = "my stuffs";
+        	sectionDiv = "<div class='item_holder'><div class='items'>" + invSect[0] + "</div><div class='items'>" + invSect[1] + "</div><div class='items'>" + invSect[2] + "</div>" + "</div>";
         	sectionImg = "inventory";
-
-
         }
         if (elem === "dna") {
         	sectionText = "RESEARCH";
-        	sectionDiv = "dna stuffs";
+        	sectionDiv = "<div class='item_holder'><div class='items'>" + dnaSect[0] + "</div><div class='items'>" + dnaSect[1] + "</div><div class='items'>" + dnaSect[2] + "</div>" + "</div>";
         	sectionImg = "dna";
-
-
         }
 
         h1.innerHTML = sectionText;
@@ -144,6 +134,11 @@ myUI = {
         section.append(h1);
         section.append(sDiv);
         loboGame.append(section);
+
+        var item_holder = bySel(".item_holder");
+        setTimeout(() => {
+            makeFull(item_holder);
+        }, 200);
 	},
 	toggleScreen: (fsBtn) => {
 		return () => {
