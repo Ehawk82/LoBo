@@ -138,6 +138,8 @@ myUI = {
         var item_holder = bySel(".item_holder");
         setTimeout(() => {
             makeFull(item_holder);
+            var addTerraBtn = bySel("#addTerraBtn");
+            addTerraBtn.addEventListener("click", myTerra.go(), false);
         }, 200);
 	},
 	toggleScreen: (fsBtn) => {

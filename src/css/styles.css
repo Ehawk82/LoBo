@@ -6,21 +6,25 @@ html, body {
    user-select: none; 
    padding: 0;
    margin: 0;
-   font-family: helvetica;
+   font-family: orbitron, san-sarif;
+   font-weight: 500;
+   font-size: 18px;
+   letter-spacing: 2px;
+
 }
 body {
 	background:black;
 	color:white;
 }
 button {
-
+border: none;
 }
 section {
 	display: grid;
     height:fit-content;
 margin:0;
 
-    
+    text-shadow: .5px 1px .5px black, .5px 1px .5px black, .5px 1px .5px black;
 }
 h1 {
 display: initial;
@@ -30,6 +34,8 @@ width: 98vw;
 padding: 0;
 color:rgba(111,111,111,1);
 text-shadow: 1px 2px 1px black ;
+}
+h4 {
 }
 /*CLASS*/
 .dvContain {
@@ -43,9 +49,9 @@ text-shadow: 1px 2px 1px black ;
 	text-shadow: 0 0 0 rgba(125,130,135,0.8), .5px 1px .5px black, 0 0 0 rgba(125,130,135,0.8), .5px 1px .5px black;
     box-shadow: 0 0 .5px black, 0 0 .5px black, 0 0 .5px black;
 	display: inline-block;
-	font-size: 20pt;
-	line-height: 35px;
-	width: 35px;
+	font-size: 18pt;
+	line-height: 40px;
+	width: 40px;
 	background-color:rgba(0, 0, 0, .5); 
 	text-align: center;
 	font-weight: 500px;
@@ -65,8 +71,8 @@ text-shadow: 1px 2px 1px black ;
     box-shadow: 0 0 .5px rgba(111, 111, 11, .8), 0 0 .5px rgba(111, 111, 11, .8), 0 0 .8px black;
 	display: inline-block;
 	font-size: 20pt;
-	line-height: 35px;
-	width: 35px;
+	line-height: 40px;
+	width: 40px;
 	background-color:rgba(0, 0, 0, .5);
 	background-image: radial-gradient(rgba(253,253,253, 1), rgba(253,253,253, 0.5), rgba(253,253,253, 0.2));
 	text-align: center;
@@ -101,6 +107,37 @@ text-shadow: 1px 2px 1px black ;
    background-repeat: no-repeat;
    background-position: center;
    background-size: 1280px 85vh;
+}
+.sDiv button {
+	color: rgba(255,255,255,0.4);  
+	text-shadow: 0 0 0 black, .5px 1px .5px transparent, 0 0 0 black, .5px 1px .5px transparent;
+    box-shadow: 0 0 .5px rgba(111, 111, 11, .8), 0 0 .5px rgba(111, 111, 11, .8), 0 0 .8px black;
+	display: inline-block;
+	line-height: 40px;
+	width: 40px;
+	background-color:rgba(0, 0, 0, .5);
+	background-image: radial-gradient(rgba(253,253,253, 1), rgba(253,253,253, 0.5), rgba(253,253,253, 0.2));
+	text-align: center;
+	cursor: pointer;
+	margin: 0 3px;
+}
+.sDiv button:active {
+	color: rgba(0,0,0,0.4);  
+	box-shadow: 0 0 .5px rgba(111, 111, 111, .5),  0 0 .5px rgba(111, 111, 111, .5),  0 0 .5px black;
+	background-image: radial-gradient(rgba(253,253,253, 1), rgba(253,253,253, 0.5), rgba(253,253,253, 0.2));
+	text-shadow: 0 0 0 black, .5px 1px .5px transparent;
+}
+.sDiv button:disabled {
+	color: rgba(255,255,255,0.5);  
+	text-shadow: 0 0 0 rgba(125,130,135,0.0), .5px 1px .5px transparent;
+    box-shadow: 0 0 .5px transparent, 0 0 .5px transparent, 0 0 .5px transparent;
+	display: inline-block;
+	line-height: 40px;
+	width: 40px;
+	background-color:rgba(220, 220, 220, .2); 
+	text-align: center;
+	cursor: pointer;
+	margin: 0 3px;
 }
 .item_holder {
 	transition: 600ms all;
@@ -137,8 +174,9 @@ text-shadow: 1px 2px 1px black ;
     overflow: hidden;
 }
 /*MULTI*/
-.buttons {
+.buttons, button {
 	outline-style: none;
+	cursor: pointer;
 }
 
 .buttons, .buttons_full, section, h1{
@@ -148,7 +186,7 @@ text-shadow: 1px 2px 1px black ;
 	margin:5px 0;
 
 }
-section, .sDiv {
+section, .sDiv, .sDiv button {
 	box-shadow: 0 0 1px inset black, 0 0 2px inset black,0 0 3px inset black;
 }
 
@@ -162,7 +200,5 @@ section {
 .sDiv {
 	text-align: center;
 }
-.sDiv, section, .buttons, .buttons_full{
-	border-radius:4px;
-}
+
 /*KEYFRAMES*/
