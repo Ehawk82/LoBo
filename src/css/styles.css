@@ -24,7 +24,7 @@ section {
     height:fit-content;
 margin:0;
 
-    text-shadow: .5px 1px .5px black, .5px 1px .5px black, .5px 1px .5px black;
+    
 }
 h1 {
 display: initial;
@@ -36,6 +36,12 @@ color:rgba(111,111,111,1);
 text-shadow: 1px 2px 1px black ;
 }
 h4 {
+	background-color: darkgrey;
+    display: table-cell;
+    width:inherit;
+    line-height:40px;
+    margin:0;
+    padding:0;
 }
 /*CLASS*/
 .dvContain {
@@ -101,25 +107,26 @@ h4 {
     float: right;
 }
 .sDiv {
-   background-color: slategrey;
    height:86vh;
    margin:.4vh 0;
    background-repeat: no-repeat;
    background-position: center;
-   background-size: 1280px 85vh;
+   background-size: 1280px 86vh;
+   padding: 0 0 ;
 }
 .sDiv button {
 	color: rgba(255,255,255,0.4);  
 	text-shadow: 0 0 0 black, .5px 1px .5px transparent, 0 0 0 black, .5px 1px .5px transparent;
     box-shadow: 0 0 .5px rgba(111, 111, 11, .8), 0 0 .5px rgba(111, 111, 11, .8), 0 0 .8px black;
-	display: inline-block;
+	display: -webkit-box;
 	line-height: 40px;
 	width: 40px;
 	background-color:rgba(0, 0, 0, .5);
 	background-image: radial-gradient(rgba(253,253,253, 1), rgba(253,253,253, 0.5), rgba(253,253,253, 0.2));
 	text-align: center;
 	cursor: pointer;
-	margin: 0 3px;
+    padding: 0;
+
 }
 .sDiv button:active {
 	color: rgba(0,0,0,0.4);  
@@ -140,7 +147,8 @@ h4 {
 	margin: 0 3px;
 }
 .item_holder {
-	transition: 600ms all;
+	transition: 200ms all;
+	transition-delay: 100ms;
 	background-color: rgba(10,10,10,.7);
 	width:80vw;
 	height: 70vh;
@@ -149,7 +157,8 @@ h4 {
 	
 }
 .item_holder_full {
-	transition: 600ms all;
+	transition: 200ms all;
+	transition-delay: 100ms;
 	background-color: rgba(10,10,10,.2);
 	width:80vw;
 	height: 70vh;
@@ -161,11 +170,30 @@ h4 {
 	background-color:rgba(5, 5, 5, 0.7);
 
 	display: table-cell;
-    box-shadow: 0 0 .1px inset white, 0 0 .2px inset white, 0 0 .3px inset white, 0 0 .4px inset white;
     width:inherit;
-
     height: inherit;
-	padding: 0 5px;
+	padding: 0 ;
+}
+.settingsPanel {
+	transition: 200ms all;
+	position:fixed;
+	right:-250px;
+	background-color: slategrey;
+	width:250px;
+    height:-webkit-fill-available;
+    text-align: center;
+	top:50px;
+
+}
+.settingsPanel_full {
+	transition: 200ms all;
+	position:fixed;
+	right:0;
+	background-color: slategrey;
+	width:250px;
+    height:-webkit-fill-available;
+    text-align: center;
+	top:50px;
 }
 /*ID*/
 #loboGame {
@@ -186,8 +214,8 @@ h4 {
 	margin:5px 0;
 
 }
-section, .sDiv, .sDiv button {
-	box-shadow: 0 0 1px inset black, 0 0 2px inset black,0 0 3px inset black;
+section, .sDiv, .sDiv button, .settingsPanel, h4 {
+	box-shadow: 0 0 1px inset black, 0 0 1px inset black,0 0 1px inset black;
 }
 
 #loboGame {
@@ -200,5 +228,7 @@ section {
 .sDiv {
 	text-align: center;
 }
-
+section, h4 {
+	text-shadow: .5px 1px .5px black, .5px 1px .5px black, .5px 1px .5px black;
+}
 /*KEYFRAMES*/

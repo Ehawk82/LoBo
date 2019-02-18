@@ -1,19 +1,42 @@
-var myTerra = {
-	go: () => {
-		return () => {
-			console.log("wokring btn");
-		}
-	}
-};
-homeSect = ["<h4 id='homeStatsLabel'>STATS</h4><div>12:04PM</div>", "<button id='addTerraBtn'>➕</button>", "<h4 id='statsLegend'>BANNER</h4>"];
+/*HOME*/
+homeSect = [
+"<h4>STATS</h4>", 
+"<h4>TANKS</h4>", 
+"<h4 id='statsLegend'>TASKS</h4>"
+];
 
-mapSect = ["<h4 id='homeStatsLabel'>STATS</h4>", "is here", "...now"];
+/*MAP*/
+mapSect = [
+"<h4>WORLDS</h4>", 
+"<h4>MAPS</h4>", 
+"<h4>QUESTS</h4>"
+];
 
-marketSect = ["<h4 id='homeStatsLabel'>STATS</h4>", "is here", "...now"];
+/*MARKET*/
+marketSect = [
+"<h4>SHOP NEWS</h4>", 
+"<h4>BUY/SELL</h4>", 
+"<h4>STOCKS</h4>"
+];
 
-natureSect = ["<h4 id='homeStatsLabel'>STATS</h4>", "is here", "...now"];
+/*NATURE*/
+natureSect = [
+"<h4>BIOMES</h4>",
+ "<h4>TRAITS</h4>", 
+ "<h4>QUESTS</h4>"
+ ];
 
-invSect = ["<h4 id='homeStatsLabel'>inv</h4>", "is here", "...now"];
+/*INVENTORY*/
+invSect = [
+"<h4>CHESTS</h4>",
+ "<h4>ITEMS</h4>", 
+ "<h4>ANIMALS</h4>"
+ ];
 
-dnaSect = ["<h4 id='homeStatsLabel'>RESEARCH</h4>", "is here", "...now"];
+/*RESEARCH*/
+dnaSect = [
+"<h4>RESEARCH</h4>", 
+"<h4>EFFECTS</h4>", 
+"<h4>COMPLETED</h4>"
+];
 

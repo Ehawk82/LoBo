@@ -15,7 +15,8 @@ myUI = {
 		    storeBtn = createEle("div"),
 		    mapBtn = createEle("div"),
 		    homeBtn = createEle("div"),
-		    settingsBtn = createEle("div");
+		    settingsBtn = createEle("div"),
+		    settingsPanel = createEle("div");
         
         fsBtn.innerHTML = "🔳";
 		fsBtn.className = "buttons";
@@ -57,10 +58,13 @@ myUI = {
 		homeBtn.className = "buttons";
 		homeBtn.id = "home";
 		homeBtn.onclick = myUI.goMap(homeBtn);
+        
+        settingsPanel.innerHTML = "<h4>SETTINGS</h4>";
+        settingsPanel.className = "settingsPanel";
 
 		settingsBtn.innerHTML = "⚙";
 		settingsBtn.id = "settings";
-
+		settingsBtn.onclick = myUI.settFuncToggle(settingsBtn,settingsPanel);
 		settingsBtn.className = "buttons";
 
 		btnFrameL.className = "btnFrameL";
@@ -81,13 +85,23 @@ myUI = {
         dvContain.append(btnFrameR);
 
 		loboGame.append(dvContain);
+		loboGame.append(settingsPanel)
 
 		setTimeout(() => {
             makeFull(homeBtn);
             setTimeout(() => {
             	myUI.spawnPage();
-            }, 40);
+            }, 10);
 		}, 10);
+	},
+	settFuncToggle: (settingsBtn, settingsPanel) => {
+		return () => {
+			if (settingsPanel.className != "settingsPanel_full") {
+                makeFull(settingsPanel);
+			} else {
+                takeFull(settingsPanel);
+			}
+		}
 	},
 	spawnPage: () => {
         var btns = bySelAll(".buttons_full"), elem = btns[0].id,
@@ -127,9 +141,10 @@ myUI = {
 
         h1.innerHTML = sectionText;
 
+        sDiv.style.backgroundImage = "url('../LoBo/src/assets/" + sectionImg + ".jpg')";
         sDiv.innerHTML = sectionDiv;
         sDiv.className = "sDiv";
-        sDiv.style.backgroundImage = "url('../LoBo/src/assets/" + sectionImg + ".jpg')";
+        
 
         section.append(h1);
         section.append(sDiv);
@@ -138,8 +153,7 @@ myUI = {
         var item_holder = bySel(".item_holder");
         setTimeout(() => {
             makeFull(item_holder);
-            var addTerraBtn = bySel("#addTerraBtn");
-            addTerraBtn.addEventListener("click", myTerra.go(), false);
+
         }, 200);
 	},
     giveMeControl: () => {
