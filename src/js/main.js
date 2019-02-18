@@ -142,6 +142,9 @@ myUI = {
             addTerraBtn.addEventListener("click", myTerra.go(), false);
         }, 200);
 	},
+    giveMeControl: () => {
+/*patch work if needed*/
+    },
 	toggleScreen: (fsBtn) => {
 		return () => {
 			var isInFullScreen = (document.fullscreenElement && document.fullscreenElement !== null) ||

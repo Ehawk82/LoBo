@@ -13,7 +13,7 @@ marketSect = ["<h4 id='homeStatsLabel'>STATS</h4>", "is here", "...now"];
 
 natureSect = ["<h4 id='homeStatsLabel'>STATS</h4>", "is here", "...now"];
 
-invSect = ["<h4 id='homeStatsLabel'></h4>", "is here", "...now"];
+invSect = ["<h4 id='homeStatsLabel'>inv</h4>", "is here", "...now"];
 
 dnaSect = ["<h4 id='homeStatsLabel'>RESEARCH</h4>", "is here", "...now"];
 
