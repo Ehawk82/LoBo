@@ -1,8 +1,8 @@
 /*HOME*/
 homeSect = [
 "<h4>STATS</h4>", 
-"<h4>TANKS</h4>", 
-"<h4 id='statsLegend'>TASKS</h4>"
+"<h4>UNITS</h4>", 
+"<h4>TASKS</h4>"
 ];
 
 /*MAP*/
@@ -40,3 +40,10 @@ dnaSect = [
 "<h4>COMPLETED</h4>"
 ];
 
+/*SETTINGS*/
+settingsPage = [
+"<label>MAIN</label><input type='range' id='inR1' min='0' max='100' />",
+"<label>AMBIENT</label><input type='range' id='inR2' min='0' max='100' />",
+"<label>MUSIC</label><input type='range' id='inR3' min='0' max='100' />"
+
+];

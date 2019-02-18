@@ -1,6 +1,12 @@
-var myUI;
+var myUI, myAud;
+myAud = {
+	main: "0.6",
+	amb: "0.3",
+	music: "0.3"
+};
 myUI = {
 	init: () => {
+		LSinit("myAud", myAud);
 		myUI.loadout();
 	},
 	loadout: () => {
@@ -59,7 +65,7 @@ myUI = {
 		homeBtn.id = "home";
 		homeBtn.onclick = myUI.goMap(homeBtn);
         
-        settingsPanel.innerHTML = "<h4>SETTINGS</h4>";
+        settingsPanel.innerHTML = "<h4>SETTINGS</h4>" + settingsPage[0] + settingsPage[1] + settingsPage[2];
         settingsPanel.className = "settingsPanel";
 
 		settingsBtn.innerHTML = "⚙";
@@ -86,7 +92,7 @@ myUI = {
 
 		loboGame.append(dvContain);
 		loboGame.append(settingsPanel)
-
+        
 		setTimeout(() => {
             makeFull(homeBtn);
             setTimeout(() => {
@@ -96,11 +102,17 @@ myUI = {
 	},
 	settFuncToggle: (settingsBtn, settingsPanel) => {
 		return () => {
+			var inR1 = bySel("#inR1");
 			if (settingsPanel.className != "settingsPanel_full") {
                 makeFull(settingsPanel);
+                
 			} else {
                 takeFull(settingsPanel);
+                
 			}
+			
+
+			
 		}
 	},
 	spawnPage: () => {
@@ -153,7 +165,6 @@ myUI = {
         var item_holder = bySel(".item_holder");
         setTimeout(() => {
             makeFull(item_holder);
-
         }, 200);
 	},
     giveMeControl: () => {

@@ -28,10 +28,10 @@ margin:0;
 }
 h1 {
 display: initial;
-margin:0 1vw;
-margin-bottom: -8px;
+margin:-5px 1vw;
+
 width: 98vw;
-padding: 0;
+padding: 0 0;
 color:rgba(111,111,111,1);
 text-shadow: 1px 2px 1px black ;
 }
@@ -43,6 +43,12 @@ h4 {
     margin:0;
     padding:0;
 }
+ label {
+
+	display: inherit;
+	font-size:10px;
+}
+
 /*CLASS*/
 .dvContain {
     background-color: slategrey;
@@ -76,7 +82,7 @@ h4 {
 	text-shadow: 0 0 0 black, .5px 1px .5px transparent, 0 0 0 black, .5px 1px .5px transparent;
     box-shadow: 0 0 .5px rgba(111, 111, 11, .8), 0 0 .5px rgba(111, 111, 11, .8), 0 0 .8px black;
 	display: inline-block;
-	font-size: 20pt;
+	font-size: 18pt;
 	line-height: 40px;
 	width: 40px;
 	background-color:rgba(0, 0, 0, .5);
@@ -146,6 +152,7 @@ h4 {
 	cursor: pointer;
 	margin: 0 3px;
 }
+
 .item_holder {
 	transition: 200ms all;
 	transition-delay: 100ms;
@@ -168,7 +175,7 @@ h4 {
 }
 .items {
 	background-color:rgba(5, 5, 5, 0.7);
-
+    box-shadow: 0 0 1px white inset;
 	display: table-cell;
     width:inherit;
     height: inherit;
@@ -188,7 +195,7 @@ h4 {
 .settingsPanel_full {
 	transition: 200ms all;
 	position:fixed;
-	right:0;
+	right:10px;
 	background-color: slategrey;
 	width:250px;
     height:-webkit-fill-available;
@@ -200,6 +207,11 @@ h4 {
     height: fit-content;
     min-width:420px;
     overflow: hidden;
+}
+#inR1, #inR2, #inR3 {
+	display: inherit;
+	width: -webkit-fill-available;
+	margin:0 15px;
 }
 /*MULTI*/
 .buttons, button {
