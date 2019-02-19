@@ -6,7 +6,9 @@ myAud = {
 };
 myUI = {
 	init: () => {
+		//localStorage.clear();
 		LSinit("myAud", myAud);
+        
 		myUI.loadout();
 	},
 	loadout: () => {
@@ -65,7 +67,7 @@ myUI = {
 		homeBtn.id = "home";
 		homeBtn.onclick = myUI.goMap(homeBtn);
         
-        settingsPanel.innerHTML = "<h4>SETTINGS</h4>" + settingsPage[0] + settingsPage[1] + settingsPage[2];
+        settingsPanel.innerHTML = "<h4>SETTINGS</h4><div id='dvAudContain'>" + settingsPage[0] + settingsPage[1] + settingsPage[2] + "</div>";
         settingsPanel.className = "settingsPanel";
 
 		settingsBtn.innerHTML = "⚙";
@@ -102,13 +104,28 @@ myUI = {
 	},
 	settFuncToggle: (settingsBtn, settingsPanel) => {
 		return () => {
-			var inR1 = bySel("#inR1");
+			var inR1 = bySel("#inR1"), inR2 = bySel("#inR2"), inR3 = bySel("#inR3");
+
+			 
+
 			if (settingsPanel.className != "settingsPanel_full") {
                 makeFull(settingsPanel);
+                settingsBtn.innerHTML = "💾";
+                settingsBtn.style.color = "rgba(0,0,0,1)";
                 
 			} else {
                 takeFull(settingsPanel);
-                
+                settingsBtn.style.color = "rgba(255,255,255,0.5)";
+                settingsBtn.innerHTML = "⚙";
+
+                var myAud = loadLS("myAud");
+                var mmm = JSON.parse(myAud);
+
+                mmm.main = inR1.value / 100; 
+			    mmm.amb = inR2.value / 100;  
+			    mmm.music = inR3.value / 100; 
+               
+                localStorage.setItem("myAud", JSON.stringify(mmm));
 			}
 			
 

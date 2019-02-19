@@ -41,9 +41,12 @@ dnaSect = [
 ];
 
 /*SETTINGS*/
+var myAud = loadLS("myAud");
+var mmm = JSON.parse(myAud);
+console.log(mmm.main);
 settingsPage = [
-"<label>MAIN</label><input type='range' id='inR1' min='0' max='100' />",
-"<label>AMBIENT</label><input type='range' id='inR2' min='0' max='100' />",
-"<label>MUSIC</label><input type='range' id='inR3' min='0' max='100' />"
+"<label>MAIN AUDIO</label><input type='range' id='inR1' min='0' max='100' value='" + mmm.main * 100 + "' />",
+"<label>AMBIENT SOUNDS</label><input type='range' id='inR2' min='0' max='100' value='" + mmm.amb * 100 + "' />",
+"<label>BACKGROUND MUSIC</label><input type='range' id='inR3' min='0' max='100' value='" + mmm.music * 100 + "' />"
 
 ];
