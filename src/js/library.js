@@ -1,7 +1,7 @@
 /*HOME*/
 homeSect = [
 "<h4>STATS</h4>", 
-"<h4>UNITS</h4>", 
+"<h4>UNITS</h4><div id='dvTank'></div>", 
 "<h4>TASKS</h4>"
 ];
 

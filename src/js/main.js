@@ -111,11 +111,11 @@ myUI = {
 			if (settingsPanel.className != "settingsPanel_full") {
                 makeFull(settingsPanel);
                 settingsBtn.innerHTML = "💾";
-                settingsBtn.style.color = "rgba(0,0,0,1)";
+      
                 
 			} else {
                 takeFull(settingsPanel);
-                settingsBtn.style.color = "rgba(255,255,255,0.5)";
+
                 settingsBtn.innerHTML = "⚙";
 
                 var myAud = loadLS("myAud");

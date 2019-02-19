@@ -8,7 +8,7 @@ html, body {
    margin: 0;
    font-family: orbitron, san-sarif;
    font-weight: 900;
-   font-size: 18px;
+   font-size: 15px;
    letter-spacing: 2.5px;
 
 }
@@ -28,8 +28,7 @@ margin:0;
 }
 h1 {
 display: initial;
-margin:-5px 1vw;
-
+margin:0 1vw -4px 1vw; 
 width: 98vw;
 padding: 0 0;
 color:rgba(111,111,111,1);
@@ -60,43 +59,41 @@ color: black;
 .buttons {
 	color: rgba(255,255,255,0.5);  
 	text-shadow: 0 0 0 rgba(125,130,135,0.8), .5px 1px .5px black, 0 0 0 rgba(125,130,135,0.8), .5px 1px .5px black;
-    box-shadow: 0 0 .5px black, 0 0 .5px black, 0 0 .5px black;
+
 	display: inline-block;
-	font-size: 18pt;
+	font-size: 12pt;
 	line-height: 30px;
 	width: 30px;
-	background-color:rgba(0, 0, 0, .5); 
-	text-align: center;
+
 	font-weight: 500px;
 	cursor: pointer;
 	margin: 0 3px;
+
 }
 .buttons:active {
 	color: rgba(0,0,0,0.5);  
-    box-shadow: 0 0 .5px rgba(111, 111, 11, .8), 0 0 .5px rgba(111, 111, 11, .8), 0 0 .8px black;
+
 	text-shadow: 0 0 0 black, .5px 1px .5px transparent;
-	background-image: radial-gradient(rgba(253,253,253, 1), rgba(253,253,253, 0.5), rgba(253,253,253, 0.2));
+
 }
 
 .buttons_full {
 	color: rgba(255,255,255,0.4);  
 	text-shadow: 0 0 0 black, .5px 1px .5px transparent, 0 0 0 black, .5px 1px .5px transparent;
-    box-shadow: 0 0 .5px rgba(111, 111, 11, .8), 0 0 .5px rgba(111, 111, 11, .8), 0 0 .8px black;
+
 	display: inline-block;
-	font-size: 18pt;
+	font-size: 12pt;
 	line-height: 30px;
 	width: 30px;
-	background-color:rgba(0, 0, 0, .5);
-	background-image: radial-gradient(rgba(253,253,253, 1), rgba(253,253,253, 0.5), rgba(253,253,253, 0.2));
-	text-align: center;
+
 	font-weight: 500px;
 	cursor: pointer;
 	margin: 0 3px;
 }
 .buttons_full:active {
-	color: rgba(0,0,0,0.4);  
-	box-shadow: 0 0 .5px rgba(111, 111, 111, .5),  0 0 .5px rgba(111, 111, 111, .5),  0 0 .5px black;
-	background-image: radial-gradient(rgba(253,253,253, 1), rgba(253,253,253, 0.5), rgba(253,253,253, 0.2));
+	color: rgba(0,0,0,0.5);  
+
+
 	text-shadow: 0 0 0 black, .5px 1px .5px transparent;
 }
 
@@ -104,12 +101,11 @@ color: black;
 	padding:2px 0;
 	margin: 2px;
 	display: inline;
-    text-align: center;
     float: left;
 }
 .btnFrameR {
 	padding:2px 0;
-	margin: 2px;
+	margin: 2px 0;
 	display: inline;
     float: right;
 }
@@ -149,14 +145,14 @@ color: black;
 	line-height: 30px;
 	width: 30px;
 	background-color:rgba(220, 220, 220, .2); 
-	text-align: center;
+
 	cursor: pointer;
 	margin: 0 3px;
 }
 
 .item_holder {
-	transition: 200ms all;
-	transition-delay: 100ms;
+	transition: 300ms all;
+	transition-delay: 200ms;
 	background-color: rgba(10,10,10,.7);
 	width:80vw;
 	height: 70vh;
@@ -165,8 +161,8 @@ color: black;
 	
 }
 .item_holder_full {
-	transition: 200ms all;
-	transition-delay: 100ms;
+	transition: 300ms all;
+	transition-delay: 200ms;
 	background-color: rgba(10,10,10,.2);
 	width:80vw;
 	height: 70vh;
@@ -189,7 +185,7 @@ color: black;
 
 	width:250px;
     height:-webkit-fill-available;
-    text-align: center;
+
 	top:50px;
 
 }
@@ -200,7 +196,7 @@ color: black;
 
 	width:250px;
     height:-webkit-fill-available;
-    text-align: center;
+
 	top:50px;
 }
 /*ID*/
@@ -235,7 +231,7 @@ color: black;
 
 }
 section, .sDiv, .sDiv button, h4, #dvAudContain {
-	box-shadow: 0 0 1px inset black, 0 0 1px inset black,0 0 1px inset black;
+	box-shadow: 0 0 2px inset black, 0 0 2px inset black,0 0 2px inset black, 0 0 1px black;
 }
 
 #loboGame {
@@ -245,8 +241,11 @@ section {
 	background-color:rgba(0,0,0,0.5);
 
 }
-.sDiv {
-	text-align: center;
+.sDiv, .settingsPanel_full, .settingsPanel, button, .buttons, .buttons_full {
+	text-align: -webkit-center;
+
+
+	padding: 0 1px;
 }
 section, h4 {
 	text-shadow: .5px 1px .5px black, .5px 1px .5px black, .5px 1px .5px black;
