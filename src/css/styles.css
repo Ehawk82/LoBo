@@ -172,11 +172,11 @@ color: black;
 }
 .items {
 	background-color:rgba(5, 5, 5, 0.7);
-    box-shadow: 0 0 1px white inset;
+
 	display: table-cell;
     width:inherit;
     height: inherit;
-	padding: 0 ;
+	padding: 2px ;
 }
 .settingsPanel {
 	transition: 200ms all;
@@ -216,6 +216,13 @@ color: black;
 	display: -webkit-inline-box;
 	padding: 20px 0;
 	margin:2px 0;
+}
+#tankContainer {
+    display: inherit;
+    height: inherit;
+    width: inherit;
+    box-shadow: 0 0 2px inset white;
+
 }
 /*MULTI*/
 .buttons, button {

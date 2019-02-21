@@ -1,7 +1,21 @@
+
+/*localStorage*/
+var myTanks = loadLS("myTanks");
+var myAud = loadLS("myAud");
+var mmm = JSON.parse(myAud);
+
+if (!myAud) {
+	setTimeout(() => {
+		location.reload();
+	}, 100);
+}
+
 /*HOME*/
+var addTankBtn = "+";
+
 homeSect = [
 "<h4>STATS</h4>", 
-"<h4>UNITS</h4><div id='dvTank'></div>", 
+"<h4>UNITS</h4><button id='dvTank' onclick='gameUI.init(this)'>" + addTankBtn + "</button><div id='tankContainer'>&nbsp;</div>", 
 "<h4>TASKS</h4>"
 ];
 
@@ -41,9 +55,6 @@ dnaSect = [
 ];
 
 /*SETTINGS*/
-var myAud = loadLS("myAud");
-var mmm = JSON.parse(myAud);
-console.log(mmm.main);
 settingsPage = [
 "<label>MAIN AUDIO</label><input type='range' id='inR1' min='0' max='100' value='" + mmm.main * 100 + "' />",
 "<label>AMBIENT SOUNDS</label><input type='range' id='inR2' min='0' max='100' value='" + mmm.amb * 100 + "' />",

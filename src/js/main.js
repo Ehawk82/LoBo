@@ -6,9 +6,10 @@ myAud = {
 };
 myUI = {
 	init: () => {
-		//localStorage.clear();
+		LSinit("myTanks", {});
 		LSinit("myAud", myAud);
-        
+        var x = loadLS("myAud");
+ 
 		myUI.loadout();
 	},
 	loadout: () => {
