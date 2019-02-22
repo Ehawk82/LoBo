@@ -17,34 +17,32 @@ body {
 	color:white;
 }
 button {
-border: none;
+	border: none;
+	background-color: transparent;
 }
 section {
 	display: grid;
     height:fit-content;
-margin:0;
-
-    
+	margin:0;
 }
 h1 {
-display: initial;
-margin:0 1vw -4px 1vw; 
-width: 98vw;
-padding: 0 0;
-color:rgba(111,111,111,1);
-text-shadow: 1px 2px 1px black ;
+	display: initial;
+	margin:0 10px -4px 10px; 
+	width: 98vw;
+	padding: 0 0;
+	color:rgba(111,111,111,1);
+	text-shadow: 1px 2px 1px black ;
 }
 h4 {
-	background-color: darkgrey;
+
     display: table-cell;
     width:inherit;
     line-height:40px;
     margin:0;
     padding:0;
-
 }
  label {
-color: black;
+    color: black;
 	display: inherit;
 	font-size:10px;
 }
@@ -52,48 +50,39 @@ color: black;
 /*CLASS*/
 .dvContain {
     background-color: slategrey;
-	min-width:420px;
+	width:-webkit-fill-available;
 	display: flow-root;
 }
 
 .buttons {
 	color: rgba(255,255,255,0.5);  
 	text-shadow: 0 0 0 rgba(125,130,135,0.8), .5px 1px .5px black, 0 0 0 rgba(125,130,135,0.8), .5px 1px .5px black;
-
 	display: inline-block;
 	font-size: 12pt;
 	line-height: 30px;
 	width: 30px;
-
 	font-weight: 500px;
 	cursor: pointer;
 	margin: 0 3px;
-
 }
 .buttons:active {
 	color: rgba(0,0,0,0.5);  
-
 	text-shadow: 0 0 0 black, .5px 1px .5px transparent;
-
 }
 
 .buttons_full {
 	color: rgba(255,255,255,0.4);  
 	text-shadow: 0 0 0 black, .5px 1px .5px transparent, 0 0 0 black, .5px 1px .5px transparent;
-
 	display: inline-block;
 	font-size: 12pt;
 	line-height: 30px;
 	width: 30px;
-
 	font-weight: 500px;
 	cursor: pointer;
 	margin: 0 3px;
 }
 .buttons_full:active {
 	color: rgba(0,0,0,0.5);  
-
-
 	text-shadow: 0 0 0 black, .5px 1px .5px transparent;
 }
 
@@ -110,100 +99,97 @@ color: black;
     float: right;
 }
 .sDiv {
+   width: inherit;
+
    height:86vh;
    margin:.4vh 0;
    background-repeat: no-repeat;
    background-position: center;
-   background-size: 1280px 86vh;
+   background-size: 1280px 900px;
    padding: 0 0 ;
+   overflow: hidden;
 }
 .sDiv button {
-	color: rgba(255,255,255,0.4);  
+	color: rgba(255,255,255,1);  
 	text-shadow: 0 0 0 black, .5px 1px .5px transparent, 0 0 0 black, .5px 1px .5px transparent;
-    box-shadow: 0 0 .5px rgba(111, 111, 11, .8), 0 0 .5px rgba(111, 111, 11, .8), 0 0 .8px black;
 	display: -webkit-box;
 	line-height: 30px;
 	width: 30px;
-	background-color:rgba(0, 0, 0, .5);
-	background-image: radial-gradient(rgba(253,253,253, 1), rgba(253,253,253, 0.5), rgba(253,253,253, 0.2));
 	text-align: center;
 	cursor: pointer;
     padding: 0;
+}
 
-}
-.sDiv button:active {
-	color: rgba(0,0,0,0.4);  
-	box-shadow: 0 0 .5px rgba(111, 111, 111, .5),  0 0 .5px rgba(111, 111, 111, .5),  0 0 .5px black;
-	background-image: radial-gradient(rgba(253,253,253, 1), rgba(253,253,253, 0.5), rgba(253,253,253, 0.2));
-	text-shadow: 0 0 0 black, .5px 1px .5px transparent;
-}
 .sDiv button:disabled {
-	color: rgba(255,255,255,0.5);  
+	color: rgba(150,150,150,0.5);
 	text-shadow: 0 0 0 rgba(125,130,135,0.0), .5px 1px .5px transparent;
-    box-shadow: 0 0 .5px transparent, 0 0 .5px transparent, 0 0 .5px transparent;
 	display: inline-block;
 	line-height: 30px;
 	width: 30px;
-	background-color:rgba(220, 220, 220, .2); 
-
-	cursor: pointer;
+	cursor: default;
 	margin: 0 3px;
 }
 
 .item_holder {
 	transition: 300ms all;
 	transition-delay: 200ms;
-	background-color: rgba(10,10,10,.7);
-	width:80vw;
-	height: 70vh;
+	background-color: rgba(10,10,10,0);
+	width:-webkit-fill-available;
+	height: 900px;
 	padding: 0;
-	margin:100vh 10vw 0vh 10vw;
-	
+	margin:100vh 5vw 0vh 5vw;
 }
 .item_holder_full {
 	transition: 300ms all;
 	transition-delay: 200ms;
-	background-color: rgba(10,10,10,.2);
-	width:80vw;
-	height: 70vh;
+	background-color: rgba(210,10,10,0);
+	width:-webkit-fill-available;
+	height: 900px;
 	padding: 0;
-	margin:4vh 10vw 4vh 10vw;
-	
+	margin:1vh 0 0 0;
 }
 .items {
 	background-color:rgba(5, 5, 5, 0.7);
-
 	display: table-cell;
-    width:inherit;
+    width:30vw;
     height: inherit;
 	padding: 2px ;
 }
 .settingsPanel {
 	transition: 200ms all;
 	position:fixed;
-	right:-250px;
-
+	right:-255px;
 	width:250px;
     height:-webkit-fill-available;
-
-	top:50px;
-
+	top:45px;
 }
 .settingsPanel_full {
 	transition: 200ms all;
 	position:fixed;
 	right:10px;
-
 	width:250px;
     height:-webkit-fill-available;
-
-	top:50px;
+	top:45px;
 }
+.newTankForm {
+	transition: 600ms all;
+	display: -webkit-box;
+	opacity: 0;
+	padding:5px 0;
+
+}
+.newTankForm_full {
+	transition: 600ms all;
+	display: -webkit-box;
+	opacity: 1;
+	padding:5px 0;
+}
+
 /*ID*/
 #loboGame {
     height: fit-content;
-    min-width:420px;
-    overflow: hidden;
+    width:fit-content;
+
 }
 #inR1, #inR2, #inR3 {
 	display: inherit;
@@ -215,43 +201,36 @@ color: black;
     background-color: slategrey;
 	display: -webkit-inline-box;
 	padding: 20px 0;
-	margin:2px 0;
+	margin:4px 0;
 }
 #tankContainer {
     display: inherit;
     height: inherit;
     width: inherit;
-    box-shadow: 0 0 2px inset white;
-
 }
+
 /*MULTI*/
 .buttons, button {
 	outline-style: none;
 	cursor: pointer;
 }
-
 .buttons, .buttons_full, section, h1{
 	transition: 60ms all;
 }
  .sDiv{
 	margin:5px 0;
-
 }
-section, .sDiv, .sDiv button, h4, #dvAudContain {
-	box-shadow: 0 0 2px inset black, 0 0 2px inset black,0 0 2px inset black, 0 0 1px black;
+section, .sDiv, h4, #dvAudContain, .newTankForm_full, .newTankForm {
+	box-shadow: 0 0 1px inset black, 0 0 1px inset black,0 0 1px black, 0 0 1px black;
 }
-
-#loboGame {
-	background-color:slategrey;
+h4, .newTankForm_full, .newTankForm, #loboGame  {
+	background-color:rgba(148,152,158,1);
 }
 section {
 	background-color:rgba(0,0,0,0.5);
-
 }
 .sDiv, .settingsPanel_full, .settingsPanel, button, .buttons, .buttons_full {
 	text-align: -webkit-center;
-
-
 	padding: 0 1px;
 }
 section, h4 {

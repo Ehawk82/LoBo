@@ -15,7 +15,7 @@ var addTankBtn = "+";
 
 homeSect = [
 "<h4>STATS</h4>", 
-"<h4>UNITS</h4><button id='dvTank' onclick='gameUI.init(this)'>" + addTankBtn + "</button><div id='tankContainer'>&nbsp;</div>", 
+"<h4>UNITS</h4><button id='dvTank' onclick='gameUI.init()'>" + addTankBtn + "</button><div id='tankContainer'></div>", 
 "<h4>TASKS</h4>"
 ];
 
