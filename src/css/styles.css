@@ -195,6 +195,7 @@ section {
 	display: initial;
     width:90%;
     margin:8px 0;
+    box-sizing:content-box;
 }
 /*ID*/
 #loboGame {

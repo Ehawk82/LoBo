@@ -14,6 +14,10 @@ gameUI = {
         var newTankForm = createEle("div"),
             newTankIn = createEle("input"),
             newTankType = createEle("select"),
+            newTankSize = createEle("select"),
+            optSmall = createEle("option"),
+            optMed = createEle("option"),
+            optLarge = createEle("option"),
             opt0 = createEle("option"),
             opt1 = createEle("option"),
             opt2 = createEle("option"),
@@ -22,9 +26,26 @@ gameUI = {
             opt5 = createEle("option"),
             opt6 = createEle("option"),
             opt7 = createEle("option"),
-            opt8 = createEle("option");
-            opt9 = createEle("option"),
+            opt8 = createEle("option"),
+            opt9 = createEle("option");
         
+        optLarge.innerHTML = "LARGE";
+        optLarge.value = "3";
+
+        optMed.innerHTML = "MEDIUM";
+        optMed.value = "2";
+
+        optSmall.innerHTML = "SMALL";
+        optSmall.value = "1";
+
+        newTankSize.type = "text";
+        newTankSize.selected = "0";
+        newTankSize.className = "tankFormItems";
+        newTankSize.name = "selectTerra";
+        newTankSize.append(optSmall);
+        newTankSize.append(optMed);
+        newTankSize.append(optLarge);
+      
         opt9.innerHTML = "CHAPARRAL";
         opt9.value = "9";
 
@@ -77,6 +98,7 @@ gameUI = {
         newTankForm.className = "newTankForm";
         newTankForm.append(newTankIn);
         newTankForm.append(newTankType);
+        newTankForm.append(newTankSize);
 
         tankContainer.append(newTankForm);
         
