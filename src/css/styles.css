@@ -48,6 +48,16 @@ h4 {
 }
 section {
 	border-width:0;
+
+}
+select, option {
+   font-family: orbitron, san-sarif;
+   font-weight: 800;
+
+}
+input {
+   font-weight: 800;
+	
 }
 /*CLASS*/
 .dvContain {
@@ -181,6 +191,7 @@ section {
 	transition: 600ms all;
 	display: grid;
 	opacity: 0;
+	height: -webkit-fill-available;
 	width:inherit;
 	padding:5px 0;
 }
@@ -188,6 +199,7 @@ section {
 	transition: 600ms all;
 	display: grid;
 	opacity: 1;
+	height: -webkit-fill-available;
 	width:inherit;
 	padding:5px 0;
 }
