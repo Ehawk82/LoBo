@@ -14,6 +14,7 @@ gameUI = {
         var newTankForm = createEle("div"),
             newTankIn = createEle("input"),
             cheatToggle = createEle("input"),
+            cheatSpan = createEle("span"),
             cheatLabel = createEle("label"),
             newTankCheatThing = createEle("div"),
             newTankType = createEle("select"),
@@ -31,18 +32,21 @@ gameUI = {
             opt7 = createEle("option"),
             opt8 = createEle("option"),
             opt9 = createEle("option");
-
+        
+        cheatSpan.className = "slider";
 
         cheatToggle.type = "checkbox";
         cheatToggle.name = "checkboxCheats";
         cheatToggle.className = "checkboxes";
         cheatToggle.id = "ch1";
         
-        cheatLabel.innerHTML = "CHEATS";
-        cheatLabel.className = "labels";
+        cheatLabel.className = "cheatLabel";
         cheatLabel.id = "cheatLabel";
         cheatLabel.append(cheatToggle);
+        cheatLabel.append(cheatSpan);
 
+        newTankCheatThing.innerHTML = "CHEATS";
+        newTankCheatThing.className = "newTankCheatThing";
         newTankCheatThing.append(cheatLabel);
 
         optLarge.innerHTML = "LARGE";
@@ -122,7 +126,7 @@ gameUI = {
         
         setTimeout(() => {
         	makeFull(newTankForm);
-        }, 230);
+        }, 250);
 	}
 };
 //gameUI.init();
