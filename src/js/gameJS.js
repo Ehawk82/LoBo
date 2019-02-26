@@ -13,6 +13,8 @@ gameUI = {
 	updateContainer: (tankContainer, dvTank) => {
         var newTankForm = createEle("div"),
             newTankIn = createEle("input"),
+            cheatToggle = createEle("input"),
+            cheatLabel = createEle("label"),
             newTankCheatThing = createEle("div"),
             newTankType = createEle("select"),
             newTankSize = createEle("select"),
@@ -29,8 +31,19 @@ gameUI = {
             opt7 = createEle("option"),
             opt8 = createEle("option"),
             opt9 = createEle("option");
+
+
+        cheatToggle.type = "checkbox";
+        cheatToggle.name = "checkboxCheats";
+        cheatToggle.className = "checkboxes";
+        cheatToggle.id = "ch1";
         
-        newTankCheatThing.innerHTML = "cheat toggle";
+        cheatLabel.innerHTML = "CHEATS";
+        cheatLabel.className = "labels";
+        cheatLabel.id = "cheatLabel";
+        cheatLabel.append(cheatToggle);
+
+        newTankCheatThing.append(cheatLabel);
 
         optLarge.innerHTML = "LARGE";
         optLarge.value = "3";
@@ -95,7 +108,7 @@ gameUI = {
         newTankType.append(opt9);
 
         newTankIn.type = "text";
-        newTankIn.placeholder = "TANK NAME";
+        newTankIn.placeholder = "NAME";
         newTankIn.className = "tankFormItems";
 
         newTankForm.innerHTML = "<h2>NEW TANK</h2>";
@@ -107,7 +120,6 @@ gameUI = {
 
         tankContainer.append(newTankForm);
         
-
         setTimeout(() => {
         	makeFull(newTankForm);
         }, 230);

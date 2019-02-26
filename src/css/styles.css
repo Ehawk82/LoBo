@@ -50,14 +50,15 @@ section {
 	border-width:0;
 
 }
-select, option {
+select, option, input {
    font-family: orbitron, san-sarif;
    font-weight: 800;
+   font-size:17px;
+   letter-spacing: 2px;
 
 }
 input {
-   font-weight: 800;
-	
+
 }
 /*CLASS*/
 .dvContain {
@@ -110,14 +111,14 @@ input {
     float: right;
 }
 .sDiv {
-   width: inherit;
+   width: 1278px;
    height:86vh;
    margin:.4vh 0;
    background-repeat: no-repeat;
    background-position: center;
    background-size: 1280px 900px;
    padding: 0 0 ;
-   overflow: hidden;
+
 }
 .sDiv button {
 	color: rgba(255,255,255,1);  
