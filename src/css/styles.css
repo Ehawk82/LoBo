@@ -113,7 +113,7 @@ input[type="checkbox"] {
 .sDiv {
    width: 1278px;
    height:800px;
-   margin:.4vh 0;
+   margin:auto !important;
    background-repeat: no-repeat;
    background-position: center;
    background-size: 1280px 900px;
