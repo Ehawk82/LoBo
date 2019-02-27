@@ -17,6 +17,9 @@ gameUI = {
             cheatSpan = createEle("span"),
             cheatLabel = createEle("label"),
             newTankCheatThing = createEle("div"),
+            newTankMapPreviewBox = createEle("div"),
+            newTankFormBtnHolder = createEle("div"),
+            newTankFormBtn = createEle("button"),
             newTankType = createEle("select"),
             newTankSize = createEle("select"),
             optSmall = createEle("option"),
@@ -33,6 +36,15 @@ gameUI = {
             opt8 = createEle("option"),
             opt9 = createEle("option");
         
+        newTankMapPreviewBox.innerHTML = "&nbsp;";
+        newTankMapPreviewBox.className = "newTankMapPreviewBox";
+
+        newTankFormBtn.innerHTML = "✔";
+        newTankFormBtn.disabled = true;
+
+        newTankFormBtnHolder.className = "newTankFormBtnHolder";
+        newTankFormBtnHolder.append(newTankFormBtn);
+
         cheatSpan.className = "slider";
 
         cheatToggle.type = "checkbox";
@@ -121,6 +133,9 @@ gameUI = {
         newTankForm.append(newTankType);
         newTankForm.append(newTankSize);
         newTankForm.append(newTankCheatThing);
+        newTankForm.append(newTankMapPreviewBox);
+        newTankForm.append(newTankFormBtnHolder);
+
 
         tankContainer.append(newTankForm);
         
