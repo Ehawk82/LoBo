@@ -213,7 +213,7 @@ input[type="checkbox"] {
 .tankFormItems {
 	display: initial;
     width:90%;
-    margin:6px 0;
+    margin:8px 0;
     box-sizing:content-box;
 }
 .newTankCheatThing {
