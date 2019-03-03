@@ -6,13 +6,16 @@ gameUI = {
 		    dvTank = bySel("#dvTank");
 
 		dvTank.disabled = true;
-        
+        tankContainer.innerHTML = "";
 		gameUI.updateContainer(tankContainer, dvTank);
 
 	},
 	updateContainer: (tankContainer, dvTank) => {
         var newTankForm = createEle("div"),
             newTankIn = createEle("input"),
+            difficultyRngHolder = createEle("div"),
+            difficultyRngLabel = createEle("label"),
+            difficultyRng = createEle("input"),
             cheatToggle = createEle("input"),
             cheatSpan = createEle("span"),
             cheatLabel = createEle("label"),
@@ -36,6 +39,21 @@ gameUI = {
             opt8 = createEle("option"),
             opt9 = createEle("option");
         
+        difficultyRngLabel.innerHTML = "NORMAL";
+        difficultyRngLabel.className = "difficultyRngLabel";
+
+        difficultyRng.type = "range";
+        difficultyRng.max = 3;
+        difficultyRng.min = 1;
+        difficultyRng.value = 2;
+        difficultyRng.className = "difficultyRng";
+        difficultyRng.onchange = gameUI.changeDiff(difficultyRng, difficultyRngLabel);
+
+        difficultyRngHolder.className = "difficultyRngHolder";
+        difficultyRngHolder.append(difficultyRngLabel);
+        difficultyRngHolder.append(difficultyRng);
+
+
         newTankMapPreviewBox.innerHTML = "&nbsp;";
         newTankMapPreviewBox.className = "newTankMapPreviewBox";
 
@@ -126,6 +144,7 @@ gameUI = {
         newTankIn.type = "text";
         newTankIn.placeholder = "NAME";
         newTankIn.className = "tankFormItems";
+        newTankIn.onkeyup = gameUI.checkAndRun(newTankForm, newTankIn, newTankType, newTankSize, cheatToggle, difficultyRng, newTankFormBtn);
 
         newTankForm.innerHTML = "<h2>NEW TANK</h2>";
         newTankForm.className = "newTankForm";
@@ -133,6 +152,7 @@ gameUI = {
         newTankForm.append(newTankType);
         newTankForm.append(newTankSize);
         newTankForm.append(newTankCheatThing);
+        newTankForm.append(difficultyRngHolder);
         newTankForm.append(newTankMapPreviewBox);
         newTankForm.append(newTankFormBtnHolder);
 
@@ -142,6 +162,38 @@ gameUI = {
         setTimeout(() => {
         	makeFull(newTankForm);
         }, 250);
+	},
+	changeDiff: (difficultyRng, difficultyRngLabel) => {
+		return () => {
+         var diffText;
+
+         if (difficultyRng.value === "1") {
+             diffText = "EASY";
+         }
+         if (difficultyRng.value === "2") {
+             diffText = "NORMAL";
+         }
+         if (difficultyRng.value === "3") {
+             diffText = "HARD";
+         }
+
+         difficultyRngLabel.innerHTML = diffText;
+     }
+	},
+	checkAndRun: (newTankForm, newTankIn, newTankType, newTankSize, cheatToggle, difficultyRng, newTankFormBtn) => {
+		return () => {
+			if (newTankIn.value != "" || newTankIn.value != " " || newTankIn.value != "   ") {
+				newTankFormBtn.disabled = false;
+				newTankFormBtn.onclick = gameUI.runTankAdd(newTankForm, newTankIn, newTankType, newTankSize, cheatToggle, difficultyRng);
+			} else {
+				newTankFormBtn.disabled = true;
+			}
+		}
+	},
+	runTankAdd: (newTankForm, newTankIn, newTankType, newTankSize, cheatToggle, difficultyRng) => {
+		return () => {
+			//takeFull(newTankForm);
+			
+		}
 	}
 };
-//gameUI.init();
