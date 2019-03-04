@@ -194,6 +194,13 @@ gameUI = {
 		return () => {
 			//takeFull(newTankForm);
 			
+			var mSGs = loadLS("mySavedGames");
+			if (!mSGs || mSGs === null) {
+				var savedItems = newTankIn.value;
+            LSinit("mySavedGames", savedItems);
+            } else {
+	            
+            }
 		}
 	}
 };
