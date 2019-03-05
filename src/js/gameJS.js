@@ -192,13 +192,15 @@ gameUI = {
 	},
 	runTankAdd: (newTankForm, newTankIn, newTankType, newTankSize, cheatToggle, difficultyRng) => {
 		return () => {
-			//takeFull(newTankForm);
-			
+            var dvTank = bySel("#dvTank");
+
+			takeFull(newTankForm);
+			dvTank.disabled = false;
 			var mSGs = loadLS("mySavedGames");
 			if (!mSGs || mSGs === null) {
-				var savedItems = newTankIn.value;
-            LSinit("mySavedGames", savedItems);
+            console.log("no data");
             } else {
+            console.log("yes data");
 	            
             }
 		}
