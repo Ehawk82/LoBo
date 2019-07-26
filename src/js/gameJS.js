@@ -196,12 +196,7 @@ gameUI = {
 
 			takeFull(newTankForm);
 			dvTank.disabled = false;
-			var mSGs = loadLS("mySavedGames");
-			if (!mSGs || mSGs === null) {
-                myTanks = {
-                    "0" : newTankIn.value
-                };
-            saveLS("myTanks", myTanks);
+			var mSGs = parseLS("myTanks");
             
             var tankInfo = {
                 "name": newTankIn.value,
@@ -209,17 +204,11 @@ gameUI = {
                 "size": newTankSize.value,
                 "cheats": cheatToggle.value,
                 "difficulty": difficultyRng.value
-            }
-            
-            saveLS(newTankIn.value, tankInfo);
-            saveLS("mySavedGames", 1)
-//            console.log(myTanks);
-
-            } else {
-
-            //console.log(myTanks[key]);
-	            
-            }
+            };
+            var ttt = {0: tankInfo};
+            saveLS("myTanks", ttt);
+            mSGs = parseLS("myTanks");
+            //console.log(mSGs.length);
 		}
 	}
 };

@@ -9,20 +9,20 @@ if (!myAud) {
 		location.reload();
 	}, 100);
 }
-var mySavedGames;
+var mymyTanks;
 
-var mSGs = loadLS("mySavedGames");
+var mSGs = loadLS("mymyTanks");
 if (!mSGs || mSGs === null) {
-    mySavedGames = "no saves on record";
+    mymyTanks = "no saves on record";
 } else {
-	mySavedGames = "games will appear here";
+	mymyTanks = "games will appear here";
 }
 /*HOME*/
 var addTankBtn = "+";
 
 homeSect = [
 "<h4>STATS</h4>", 
-"<h4>UNITS</h4><button id='dvTank' onclick='gameUI.init()'>" + addTankBtn + "</button><div id='tankContainer'>" + mySavedGames + "</div>", 
+"<h4>UNITS</h4><button id='dvTank' onclick='gameUI.init()'>" + addTankBtn + "</button><div id='tankContainer'>" + mymyTanks + "</div>", 
 "<h4>TASKS</h4>"
 ];
 
