@@ -198,9 +198,26 @@ gameUI = {
 			dvTank.disabled = false;
 			var mSGs = loadLS("mySavedGames");
 			if (!mSGs || mSGs === null) {
-            console.log("no data");
+                myTanks = {
+                    "0" : newTankIn.value
+                };
+            saveLS("myTanks", myTanks);
+            
+            var tankInfo = {
+                "name": newTankIn.value,
+                "type": newTankType.value,
+                "size": newTankSize.value,
+                "cheats": cheatToggle.value,
+                "difficulty": difficultyRng.value
+            }
+            
+            saveLS(newTankIn.value, tankInfo);
+            saveLS("mySavedGames", 1)
+//            console.log(myTanks);
+
             } else {
-            console.log("yes data");
+
+            //console.log(myTanks[key]);
 	            
             }
 		}
