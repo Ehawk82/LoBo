@@ -10,29 +10,35 @@ html, body {
    font-weight: 900;
    font-size: 15px;
    letter-spacing: 2.5px;
-
 }
+
 body {
 	background:black;
 	color:white;
 }
+
 button {
 	border: none;
 	background-color: transparent;
 }
+
 section {
-	display: grid;
-    height:fit-content;
+	display: table-cell;
+    height:92vh;
+    width:100vw;
 	margin:0;
+	border-width:0;
 }
+
 h1 {
 	display: initial;
-	margin:0 10px -4px 10px; 
-	width: 98vw;
+	margin:0 5vw; 
+	width: 90vw;
 	padding: 0 0;
-	color:rgba(111,111,111,1);
+	color:rgba(191,191,191,1);
 	text-shadow: 1px 2px 1px black ;
 }
+
 h4 {
 
     display: table-cell;
@@ -41,25 +47,25 @@ h4 {
     margin:0;
     padding:0;
 }
- label {
+
+label {
     color: black;
 	display: inherit;
 	font-size:10px;
 }
-section {
-	border-width:0;
 
-}
 select, option, input {
    font-family: orbitron, san-sarif;
    font-weight: 800;
    font-size:17px;
    letter-spacing: 2px;
 }
+
 input[type="checkbox"] {
      display:inherit;
 
 }
+
 /*CLASS*/
 .dvContain {
 	width:-webkit-fill-available;
@@ -67,7 +73,7 @@ input[type="checkbox"] {
 }
 
 .buttons {
-	color: rgba(255,255,255,0.5);  
+	color: rgba(255,255,255,0.9);  
 	text-shadow: 0 0 0 rgba(125,130,135,0.8), .5px 1px .5px black, 0 0 0 rgba(125,130,135,0.8), .5px 1px .5px black;
 	display: inline-block;
 	font-size: 12pt;
@@ -77,10 +83,12 @@ input[type="checkbox"] {
 	cursor: pointer;
 	margin: 0 3px;
 }
+
 .buttons:active {
 	color: rgba(0,0,0,0.5);
 	text-shadow: 0 0 0 black, .5px 1px .5px transparent;
 }
+
 .buttons_full {
 	color: rgba(255,255,255,0.5);  
 	text-shadow: 0 0 0 black, .5px 1px .5px transparent, 0 0 0 black, .5px 1px .5px transparent;
@@ -92,6 +100,7 @@ input[type="checkbox"] {
 	cursor: pointer;
 	margin: 0 3px;
 }
+
 .buttons_full:active {
 	color: rgba(0,0,0,0.5);  
 	text-shadow: 0 0 0 black, .5px 1px .5px transparent;
@@ -103,24 +112,26 @@ input[type="checkbox"] {
 	display: inline;
     float: left;
 }
+
 .btnFrameR {
 	padding:2px 0;
 	margin: 2px 0;
 	display: inline;
     float: right;
 }
+
 .sDiv {
-   width: 1278px;
-   height:760px;
-   margin:5px auto !important;
+   width: -webkit-fill-available;
+   height:-webkit-fill-available;
+   margin:0 auto !important;
    background-repeat: no-repeat;
    background-position: center;
    background-size: 1280px 900px;
-   padding: 0 0 ;
+   padding: 0;
+   display: block;
    overflow: hidden;
-   position: 
-   bottom: 5px;
 }
+
 .sDiv button {
  
 	text-shadow: 0 0 0 black, .5px 1px .5px transparent, 0 0 0 black, .5px 1px .5px transparent;
@@ -130,6 +141,7 @@ input[type="checkbox"] {
 	text-align: center;
 	cursor: pointer;
     padding: 0;
+    color:white;
 }
 
 .sDiv button:disabled {
@@ -150,31 +162,35 @@ input[type="checkbox"] {
 	height: 76vh;
 	padding: 0;
 	overflow: hidden;
-	margin:100vh 5vw 0 5vw;
+	margin:100vh 1vw 0 1vw;
 }
+
 .item_holder_full {
 	transition: 300ms margin;
 	transition-delay: 200ms;
 	background-color: rgba(210,10,10,0);
 	width:-webkit-fill-available;
-	height: 680px;
-	overflow: default;
+	height:92vh;
+	overflow: hidden;
 	padding: 0;
-	margin:10px 5vw 0 5vw;
+	margin:0 1vw;
 }
+
 .items {
 	background-color:rgba(5, 5, 5, 0.7);
 	display: table-cell;
     width:384px;
-    height: inherit;
-	padding: 2px 0;
+    height: 82vh;
+	padding:  0;
 }
+
 .items h4 {
 	min-width:384px;
     max-width:384px;
 	display: inherit;
 
 }
+
 .settingsPanel {
 	transition: 200ms all;
 	position:fixed;
@@ -183,6 +199,7 @@ input[type="checkbox"] {
     height:-webkit-fill-available;
 	top:45px;
 }
+
 .settingsPanel_full {
 	transition: 200ms all;
 	position:fixed;
@@ -191,6 +208,7 @@ input[type="checkbox"] {
     height:-webkit-fill-available;
 	top:45px;
 }
+
 .newTankForm {
 	transition: 600ms all;
 	display: grid;
@@ -201,6 +219,7 @@ input[type="checkbox"] {
 	position: relative;
 
 }
+
 .newTankForm_full {
 	transition: 600ms all;
 	display: grid;
@@ -210,15 +229,18 @@ input[type="checkbox"] {
 	padding:5px 0;
 	position: relative;
 }
+
 .tankFormItems {
 	display: initial;
     width:90%;
     margin:8px 0;
     box-sizing:content-box;
 }
+
 .newTankCheatThing {
     
 }
+
 .newTankFormBtnHolder {
 	background-color: lightgrey;
 	position: absolute; 
@@ -226,6 +248,13 @@ input[type="checkbox"] {
     width:100%;
     padding: 5px 0;
 }
+
+.newTankFormBtnHolder button {
+
+    color:limegreen;
+
+}
+
 .newTankMapPreviewBox {
 	background-color: rgba(90,150,80,0.4);
 	position: absolute; 
@@ -236,11 +265,13 @@ input[type="checkbox"] {
     padding: 5px 0;
     box-shadow: 0 0 4px rgba(0,0,0,0.5) inset;
 }
+
 .difficultyRngHolder {
     box-sizing:content-box;
     line-height: 25px;
 	width:90%;
 }
+
 .difficultyRngLabel {
 	width:40%;
 	float:left;
@@ -249,67 +280,81 @@ input[type="checkbox"] {
     margin-left:27px;
     font-size: 16px;
 }
+
 .difficultyRng {
-width:40%;
-float:right;
+	width:40%;
+	float:right;
 }
+
 /*ID*/
 #loboGame {
     height: -webkit-fill-available;
     width:fit-content;
-    display: inherit;
+    display: table-cell;
     position: relative;
 }
+
 #inR1, #inR2, #inR3 {
 	display: inherit;
 	width: -webkit-fill-available;
 	margin:0 15px;
 }
+
 #dvAudContain {
     background-color: slategrey;
 	display: -webkit-inline-box;
 	padding: 20px 0;
 	margin:4px 0;
 }
+
 #tankContainer {
     display: table-cell;
     height: inherit;
     width: inherit;
 
 }
+
 #cheatLabel {
 	line-height: 16px;
 }
+
 /*MULTI*/
 .buttons, button  {
 	cursor: pointer;
 }
+
 .buttons, button, input, select, option  {
 	outline-style: none;
 }
+
 .buttons, .buttons_full, section, h1{
 	transition: 60ms all;
 }
 
-section, .sDiv, h4, #dvAudContain, .newTankForm_full, .newTankForm {
+h4, #dvAudContain, .newTankForm_full, .newTankForm {
 	box-shadow: 0 0 0.5px inset black, 0 0 0.5px black, 0 0 0.5px inset black, 0 0 0.5px black;
 }
+
 h4, .newTankForm_full, .newTankForm, #loboGame, .dvContain  {
 	background-color:rgba(142,152,168,1);
 }
+
 section {
 	background-color:rgba(0,0,0,0.5);
 }
+
 .sDiv, .settingsPanel_full, .settingsPanel, button, .buttons, .buttons_full {
 	text-align: -webkit-center;
-	padding: 0 1px;
 }
-section, input[type="text"] {
+
+input[type="text"] {
 	text-indent: 5px;
 }
+
 section, h4 {
 	text-shadow: .5px 1px .5px black, .5px 1px .5px black, .5px 1px .5px black;
 }
+
 /*extras*/
 
 .cheatLabel {

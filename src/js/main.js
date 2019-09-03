@@ -107,13 +107,9 @@ myUI = {
 		return () => {
 			var inR1 = bySel("#inR1"), inR2 = bySel("#inR2"), inR3 = bySel("#inR3");
 
-			 
-
 			if (settingsPanel.className != "settingsPanel_full") {
                 makeFull(settingsPanel);
                 settingsBtn.innerHTML = "💾";
-      
-                
 			} else {
                 takeFull(settingsPanel);
 
@@ -171,7 +167,7 @@ myUI = {
 
         h1.innerHTML = sectionText;
 
-        sDiv.style.backgroundImage = "url('../LoBo/src/assets/" + sectionImg + ".jpg')";
+        //sDiv.style.backgroundImage = "url('../LoBo/src/assets/" + sectionImg + ".jpg')";
         sDiv.innerHTML = sectionDiv;
         sDiv.className = "sDiv";
         
